@@ -7,7 +7,7 @@ export const TextInputContainer = styled('div', {
   boxSizing: 'border-box',
   border: '2px solid $gray900',
   display: 'flex',
-  alignItems: 'baseline',
+  alignItems: 'center',
 
   '&:has(input:focus)': {
     borderColor: '$ignite300',
@@ -16,6 +16,17 @@ export const TextInputContainer = styled('div', {
   '&:has(input:disabled)': {
     opacity: 0.5,
     cursor: 'not-allowed',
+  },
+
+  variants: {
+    size: {
+      sm: {
+        padding: '$3 $4',
+      },
+      md: {
+        padding: '$3 $4',
+      },
+    },
   },
 })
 
@@ -50,7 +61,7 @@ export const Input = styled('input', {
     cursor: 'not-allowed',
   },
 
-  '&:placeholder': {
+  '&::placeholder': {
     color: '$gray400',
   },
 })
