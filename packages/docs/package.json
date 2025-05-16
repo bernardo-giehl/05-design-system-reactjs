@@ -18,6 +18,7 @@
     "@ignite-ui/tokens": "*",
     "@ignite-ui/ts-config": "*",
     "@storybook/addon-a11y": "^8.6.12",
+    "@storybook/theming": "^8.6.12",
     "phosphor-react": "^1.4.1",
     "polished": "^4.3.1",
     "react": "^19.1.0",
