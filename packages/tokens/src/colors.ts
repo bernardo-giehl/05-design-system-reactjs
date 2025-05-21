@@ -2,6 +2,11 @@ export const colors = {
   white: '#FFF',
   black: '#000',
 
+  information: '#a9c9fc',
+  success: '#60fcb6',
+  alert: '#f7eb8b',
+  error: '#ed8282',
+
   gray100: '#E1E1E6',
   gray200: '#A9A9B2',
   gray400: '#7C7C8A',

@@ -1,9 +1,12 @@
-module.exports = {
-  "stories": [
+import type { StorybookConfig } from '@storybook/react-vite';
+ 
+const config: StorybookConfig = {
+  stories: [
     "../src/pages/**/*.mdx",
     "../src/stories/**/*.stories.tsx"
   ],
-  "addons": [
+  addons: [
+    '@storybook/addon-controls',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-onboarding',
@@ -12,18 +15,23 @@ module.exports = {
     '@chromatic-com/storybook',
     '@storybook/experimental-addon-test'
   ],
-  "framework": "@storybook/react-vite",
-  "core": {
+  framework: "@storybook/react-vite",
+  core: {
     "builder": "@storybook/builder-vite"
   },
-  "features": {
-    "storyStoreV7": true
+  docs: {
+    "defaultName": "Documentation",
   },
-  viteFinal: (config, { configType }) => {
+  typescript: {
+    reactDocgen: 'react-docgen',
+    check: false,
+  },
+  async viteFinal (config, { configType }) {
     if (configType === 'PRODUCTION') {
       config.base = '/05-design-system-reactjs/'
     }
-
-    return config
+    return config;
   }
-}
+};
+ 
+export default config;
