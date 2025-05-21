@@ -46,11 +46,11 @@ export const ToastViewport = styled(Toast.Viewport, {
 })
 
 export const ToastRoot = styled(Toast.Root, {
-  backgroundColor: '$white',
-  borderRadius: '$xs',
+  backgroundColor: '$gray800',
+  borderRadius: '$sm',
   boxShadow:
     'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
-  padding: '$3',
+  padding: '$3 $5',
   display: 'grid',
   gridTemplateAreas: '"title action" "description action"',
   gridTemplateColumns: 'auto max-content',
@@ -84,27 +84,43 @@ export const ToastRoot = styled(Toast.Root, {
   variants: {
     variant: {
       information: {
-        color: '$gray800',
-        border: '2px solid $information',
-        background: '$information',
+        color: '$white',
+        background: '$gray800',
+        border: '1px solid $gray600',
+
+        '& > :not(:first-child)': {
+          color: '$gray200',
+        },
       },
 
       success: {
-        color: '$gray800',
-        border: '2px solid $success',
+        color: '$gray700',
         background: '$success',
+        border: '1px solid $gray200',
+
+        '& > :not(:first-child)': {
+          color: '$gray500',
+        },
       },
 
       alert: {
-        color: '$gray800',
-        border: '2px solid $alert',
+        color: '$gray700',
         background: '$alert',
+        border: '1px solid $gray200',
+
+        '& > :not(:first-child)': {
+          color: '$gray500',
+        },
       },
 
       error: {
-        color: '$gray800',
-        border: '2px solid $error',
+        color: '$gray700',
         background: '$error',
+        border: '1px solid $gray200',
+
+        '& > :not(:first-child)': {
+          color: '$gray500',
+        },
       },
     },
   },
@@ -117,16 +133,19 @@ export const ToastRoot = styled(Toast.Root, {
 export const ToastTitle = styled(Toast.Title, {
   gridArea: 'title',
   marginBottom: '5px',
+  fontFamily: '$default',
   fontWeight: '$bold',
-  fontSize: '$md',
+  fontSize: '$xl',
+  lineHeight: '$base',
 })
 
 export const ToastDescription = styled(Toast.Description, {
   gridArea: 'description',
   margin: 0,
-  fontWeight: '$medium',
+  fontFamily: '$default',
+  fontWeight: '$regular',
   fontSize: '$sm',
-  lineHeight: '1.3',
+  lineHeight: '$base',
 })
 
 export const ToastClose = styled(Toast.Close, {
@@ -143,15 +162,15 @@ export const ToastClose = styled(Toast.Close, {
   cursor: 'pointer',
 
   svg: {
-    width: '$4',
-    height: '$4',
+    width: '$5',
+    height: '$5',
   },
 
   '&:hover': {
-    boxShadow: '0 0 5px 2px $colors$gray800',
+    boxShadow: '0 0 0 1px $colors$gray400',
   },
 
   '&:focus': {
-    boxShadow: '0 0 5px 2px $colors$gray800',
+    boxShadow: '0 0 0 1px $colors$gray400',
   },
 })

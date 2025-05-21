@@ -6,7 +6,7 @@ export default {
   component: Tooltip,
   args: {
     children: undefined,
-    message: 'Testando o elemento Tooltip',
+    message: 'Testing the element Tooltip',
   },
   argTypes: {
     children: {
@@ -19,6 +19,6 @@ export default {
 
 export const Primary: StoryObj<TooltipProps> = {
   args: {
-    children: <Box><Text>Posicione o mouse nesta caixa</Text></Box>,
+    children: <Box><Text>Position your mouse on this box</Text></Box>,
   },
 }

@@ -29,7 +29,7 @@ export default {
 
       return (
         <div>
-          <Button onClick={() => setSavedCount((count) => count + 1)}>Clique para acionar a notificação</Button>
+          <Button onClick={() => setSavedCount((count) => count + 1)}>Click to see the Toast</Button>
 
           <ToastProvider>
             {Array.from({ length: savedCount }).map((_, index) => (

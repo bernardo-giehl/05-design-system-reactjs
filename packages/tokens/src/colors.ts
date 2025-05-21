@@ -2,7 +2,6 @@ export const colors = {
   white: '#FFF',
   black: '#000',
 
-  information: '#a9c9fc',
   success: '#60fcb6',
   alert: '#f7eb8b',
   error: '#ed8282',

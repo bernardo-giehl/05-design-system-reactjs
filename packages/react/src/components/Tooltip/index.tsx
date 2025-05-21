@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react'
 import * as TooltipUI from '@radix-ui/react-tooltip'
 
-import { TooltipContent, TooltipArrow, TooltipMessage } from './styles'
+import { TooltipContent, TooltipArrow } from './styles'
 
 export interface TooltipProps extends ComponentProps<typeof TooltipUI.Root> {
   message?: string
@@ -14,8 +14,8 @@ export function Tooltip(props: TooltipProps) {
         <TooltipUI.Trigger asChild>{props.children}</TooltipUI.Trigger>
         <TooltipUI.Portal>
           <TooltipContent>
-            <TooltipMessage>{props.message}</TooltipMessage>
-            <TooltipArrow />
+            {props.message}
+            <TooltipArrow width={16} height={8} />
           </TooltipContent>
         </TooltipUI.Portal>
       </TooltipUI.Root>

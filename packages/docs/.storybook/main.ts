@@ -2,8 +2,8 @@ import type { StorybookConfig } from '@storybook/react-vite';
  
 const config: StorybookConfig = {
   stories: [
-    "../src/pages/**/*.mdx",
-    "../src/stories/**/*.stories.tsx"
+    '../src/pages/**/*.mdx',
+    '../src/stories/**/*.stories.tsx'
   ],
   addons: [
     '@storybook/addon-controls',
@@ -15,22 +15,25 @@ const config: StorybookConfig = {
     '@chromatic-com/storybook',
     '@storybook/experimental-addon-test'
   ],
-  framework: "@storybook/react-vite",
+  framework: '@storybook/react-vite',
   core: {
-    "builder": "@storybook/builder-vite"
+    builder: '@storybook/builder-vite'
   },
   docs: {
-    "defaultName": "Documentation",
+    defaultName: 'Documentation',
   },
   typescript: {
-    reactDocgen: 'react-docgen',
+    reactDocgen: 'react-docgen-typescript',
     check: false,
   },
   async viteFinal (config, { configType }) {
+    const { mergeConfig } = await import('vite');
+    
     if (configType === 'PRODUCTION') {
       config.base = '/05-design-system-reactjs/'
     }
-    return config;
+
+    return mergeConfig(config, {});
   }
 };
  
