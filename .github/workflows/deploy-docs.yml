@@ -23,6 +23,11 @@ jobs:
 
       - name: Deploy storybook
         working-directory: ./packages/docs
-        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
+        run: npm run deploy-storybook -- --ci
+        with:
+          target_branch: gh-pages
+          build_dir: storybook-static
+          keep_history: false
+          jekyll: false
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}

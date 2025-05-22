@@ -46,8 +46,13 @@ export const ToastViewport = styled(Toast.Viewport, {
 })
 
 export const ToastRoot = styled(Toast.Root, {
+  color: '$gray200',
   backgroundColor: '$gray800',
+  border: '1px solid $gray600',
   borderRadius: '$sm',
+  borderWidth: '0px 0px 0px 8px',
+  borderStyle: 'solid',
+  borderColor: '$gray800',
   boxShadow:
     'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
   padding: '$3 $5',
@@ -83,44 +88,16 @@ export const ToastRoot = styled(Toast.Root, {
 
   variants: {
     variant: {
-      information: {
-        color: '$white',
-        background: '$gray800',
-        border: '1px solid $gray600',
-
-        '& > :not(:first-child)': {
-          color: '$gray200',
-        },
-      },
-
       success: {
-        color: '$gray700',
-        background: '$success',
-        border: '1px solid $gray200',
-
-        '& > :not(:first-child)': {
-          color: '$gray500',
-        },
+        borderColor: '$success',
       },
 
       alert: {
-        color: '$gray700',
-        background: '$alert',
-        border: '1px solid $gray200',
-
-        '& > :not(:first-child)': {
-          color: '$gray500',
-        },
+        borderColor: '$alert',
       },
 
       error: {
-        color: '$gray700',
-        background: '$error',
-        border: '1px solid $gray200',
-
-        '& > :not(:first-child)': {
-          color: '$gray500',
-        },
+        borderColor: '$error',
       },
     },
   },
@@ -132,6 +109,7 @@ export const ToastRoot = styled(Toast.Root, {
 
 export const ToastTitle = styled(Toast.Title, {
   gridArea: 'title',
+  color: '$white',
   marginBottom: '5px',
   fontFamily: '$default',
   fontWeight: '$bold',

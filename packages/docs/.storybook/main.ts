@@ -12,18 +12,23 @@ const config: StorybookConfig = {
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
-    '@chromatic-com/storybook',
-    '@storybook/experimental-addon-test'
+    '@storybook/experimental-addon-test',
+    '@chromatic-com/storybook'
   ],
-  framework: '@storybook/react-vite',
+  framework: {
+    name: "@storybook/react-vite",
+    options: {
+    }
+  },
   core: {
     builder: '@storybook/builder-vite'
   },
   docs: {
+    autodocs: true,
     defaultName: 'Documentation',
   },
   typescript: {
-    reactDocgen: 'react-docgen-typescript',
+    reactDocgen: 'react-docgen',
     check: false,
   },
   async viteFinal (config, { configType }) {
