@@ -1,5 +1,5 @@
 {
-  "name": "@ignite-ui/docs",
+  "name": "@beehive-ui/docs",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -13,10 +13,10 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/react": "*",
-    "@ignite-ui/tokens": "*",
-    "@ignite-ui/ts-config": "*",
+    "@beehive-ui/eslint-config": "*",
+    "@beehive-ui/react": "*",
+    "@beehive-ui/tokens": "*",
+    "@beehive-ui/ts-config": "*",
     "@storybook/addon-a11y": "^8.6.12",
     "@storybook/theming": "^8.6.12",
     "phosphor-react": "^1.4.1",

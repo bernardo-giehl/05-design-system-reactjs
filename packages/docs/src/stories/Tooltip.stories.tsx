@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Box, Text, Tooltip, TooltipProps } from '@ignite-ui/react'
+import { Box, Text, Tooltip, TooltipProps } from '@beehive-ui/react'
 
 export default {
   title: 'Surfaces/Tooltip',

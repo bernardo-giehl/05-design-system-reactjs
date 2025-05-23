@@ -1,6 +1,6 @@
 {
-  "name": "@ignite-ui/tokens",
-  "version": "1.0.0",
+  "name": "@beehive-ui/tokens",
+  "version": "1.0.2",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.js",
@@ -14,8 +14,8 @@
   "license": "MIT",
   "description": "",
   "devDependencies": {
-    "@ignite-ui/ts-config": "*",
-    "@ignite-ui/eslint-config": "*",
+    "@beehive-ui/ts-config": "*",
+    "@beehive-ui/eslint-config": "*",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3"
   }

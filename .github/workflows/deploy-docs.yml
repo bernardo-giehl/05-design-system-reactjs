@@ -24,6 +24,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
+          cahce-dependecy-path: '**/package-lock.json'
 
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:

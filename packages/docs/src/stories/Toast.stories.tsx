@@ -1,6 +1,6 @@
 import { useState } from 'react'        
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button, Toast, ToastProvider, ToastProps } from '@ignite-ui/react'
+import { Button, Toast, ToastProvider, ToastProps } from '@beehive-ui/react'
 
 export default {
   title: 'Surfaces/Toast',
